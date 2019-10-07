@@ -21,7 +21,7 @@
 title: Niels' blog
 email: nnijveldt@xpirit.com
 description: >- # this means to ignore newlines until "baseurl:"
-  I'm Niels Nijveldt and I work as consultant of Xpirit.
+  I'm Niels Nijveldt and I work as consultant at Xpirit.
   I enjoy working with ALM, DevOps, Azure and fullstack development.
   On this blog I will share new things I learned.
 baseurl: "" # the subpath of your site, e.g. /blog
