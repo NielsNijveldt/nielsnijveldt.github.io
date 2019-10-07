@@ -30,7 +30,7 @@ github_username:  NielsNijveldt
 linkedin_username: niels-nijveldt-2812a788
 
 # Build settings
-theme: minima
+remote_theme: thelehhman/plainwhite-jekyll
 plugins:
   - jekyll-feed
 
