@@ -31,7 +31,7 @@ After testing is done it’s important to not end the OpenCover process itself b
 So in the second script the right w3wp process is searched for and when found the process gets killed. Now OpenCover will generate the coverage file after a couple of seconds. In the end the backend IIS application can be started again in IIS like it was originally running.
 
 Both scripts can be used inside a Azure DevOps pipeline with a test execution in between. When OpenCover is stopped correctly the generated result xml can be used in for example SonarQube.
-![Azure Devops](assets/20191007/pipeline.png)
+![Azure Devops](/assets/20191007/pipeline.png)
 
 The scripts can be found on my [GitHub](github-opencover-scripts).
 Feel free to ask questions!
