@@ -25,7 +25,7 @@ This can be avoided by using [Invoke-Command](invoke-command-docs) instead with 
 Invoke-Command -ComputerName $server -Credential $credential -InDisconnectedSession -ScriptBlock { <Insert OpenCover Start script> }
 {% endhighlight %}
 
-**Note**: Be aware that the application will be running as the user running the PowerShell.
+**Note**: Be aware that the application will be running as the user running the script.
 
 After testing is done it’s important to not end the OpenCover process itself but the new w3wp process. If the OpenCover process is ended first no coverage file will be generated after it.
 So in the second script the right w3wp process is searched for and when found the process gets killed. Now OpenCover will generate the coverage file after a couple of seconds. In the end the backend IIS application can be started again in IIS like it was originally running.
