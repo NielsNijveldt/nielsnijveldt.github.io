@@ -2,7 +2,7 @@
 layout: post
 title:  "Integrate OpenCover with Azure DevOps"
 date:   2019-10-07 16:52:35 +0200
-categories: OpenCover Azure DevOps
+categories: 
 ---
 [OpenCover][github-opencover] is a code coverage tool which measures both branch and sequence points for a given .Net application. In my case I wanted to measure code coverage of a .Net web API project. The idea is to start OpenCover, run end-2-end tests (or other tests invoking my API) and generate a coverage file in the end.
 
@@ -22,7 +22,7 @@ When the PowerShell session is ended OpenCover will be killed.
 This can be avoided by using [Invoke-Command](invoke-command-docs) instead with the **-InDisconnectedSession** parameter:
 
 {% highlight ruby %}
-Invoke-Command -ComputerName $(Server) -Credential $credential -InDisconnectedSession -ScriptBlock { <Insert OpenCover Start script> }
+Invoke-Command -ComputerName $server -Credential $credential -InDisconnectedSession -ScriptBlock { <Insert OpenCover Start script> }
 {% endhighlight %}
 
 **Note**: Be aware that the application will be running as the user running the PowerShell.
