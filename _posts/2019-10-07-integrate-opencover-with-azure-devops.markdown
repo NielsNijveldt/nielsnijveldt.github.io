@@ -1,15 +1,13 @@
 ---
 title:  "Integrate OpenCover with Azure DevOps"
 date:   2019-10-07 16:52:35 +0200
-categories: 
-    - DevOps
-    - Test Automation
-    - Code Coverage
 tag: 
     - OpenCover
     - Azure DevOps
     - PowerShell
     - IIS
+    - Code Coverage
+    - Test Automation
 ---
 
 [OpenCover][github-opencover] is a code coverage tool which measures both branch and sequence points for a given .Net application. In my case I wanted to measure code coverage of a .Net web API project. The idea is to start OpenCover, run end-2-end tests (or other tests invoking my API) and generate a coverage file. This gives you insight about how much of your API is covered by for example end-2-end tests.
