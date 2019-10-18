@@ -1,6 +1,6 @@
 ---
 title:  "Integrate OpenCover with Azure DevOps"
-date:   2019-10-07 16:52:35 +0200
+date:   2019-10-18 13:00:00 +0200
 tag: 
     - OpenCover
     - Azure DevOps
