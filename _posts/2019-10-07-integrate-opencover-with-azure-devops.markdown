@@ -13,7 +13,7 @@ tag:
 [OpenCover][github-opencover] is a code coverage tool which measures both branch and sequence points for a given .Net application. In my case I wanted to measure code coverage of a .Net web API project. The idea is to start OpenCover, run end-2-end tests (or other tests invoking my API) and generate a coverage file. This gives you insight about how much of your API is covered by for example end-2-end tests.
 
 ![picture](/assets/20191007/kai-dahms-217U8oxGoQ4-unsplash.jpg)
-(_Photo by Kai Dahms on Unsplash_)[unsplash]
+_Photo by Kai Dahms on [Unsplash](unsplash)_
 
 In order to achieve this I use [OpenCover.Console.exe][github-opencover-console] and attach it to the IIS process of the backend application as described on the [wiki of OpenCover][github-opencover-wiki]. This works fine for manually starting OpenCover, but in my Azure DevOps pipeline everything should be automated. In order to do so I created three PowerShell scripts. One to start OpenCover, one to Invoke the start script on another machine and one to close OpenCover and generate a report.
 
