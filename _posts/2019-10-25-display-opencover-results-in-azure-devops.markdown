@@ -19,13 +19,6 @@ _Photo by Joshua Earle on [Unsplash](https://unsplash.com/photos/Dwheufds6kQ){:t
 To get the coverage attached to the build we can use the [Publish Code Coverage Result Task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/test/publish-code-coverage-results?view=azure-devops){:target="_blank"}. Because this task needs Cobertura or JaCoCo as input we need to make sure we get this output from OpenCover. Out-of-the-box OpenCover is not able to create such a file. 
 Also the OpenCover result file contains paths to probably folders which don't exist anymore. So in order to fix that we need to replace the paths to the existing application source on the build agent:
 
-{% highlight ruby %}
-{% raw %}
-$content = (Get-Content $(Build.SourcesDirectory)\opencover-reports\result.xml) -replace '(\w\:)\\(\w+)\\(\d+)\\(\w+)', '$(Build.SourcesDirectory)'; 
-[System.IO.File]::WriteAllLines( '$(Build.SourcesDirectory)\opencover-reports\result.xml', $content)
-{% endraw %}
-{% endhighlight %}
-
 After this is done, with [ReportGenerator](https://github.com/danielpalme/ReportGenerator){:target="_blank"} OpenCover output can be transformed into one of the required formats. (and a lot of other formats) So with this command we can make sure we get the right format:
 {% highlight ruby %}
 ReportGenerator.exe "-reports:$(Build.SourcesDirectory)\opencover-reports\result.xml" "-targetdir:coveragereport" -reporttypes:HTML;Cobertura;SonarQube
