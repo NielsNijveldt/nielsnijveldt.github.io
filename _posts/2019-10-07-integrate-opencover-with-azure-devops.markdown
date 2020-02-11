@@ -25,7 +25,7 @@ One to start OpenCover, one to Invoke the start script on another machine and on
 
 ### Starting OpenCover
 The start script stops the current running backend IIS application. After it is stopped the actual OpenCover.Console.exe can be started:
-{% highlight ruby %}
+{% highlight powershell %}
 OpenCover.Console.exe -target:C:\Windows\System32\inetsrv\w3wp.exe -targetargs:-debug -targetdir:C:\iisprojectdir -output:C:\reports\opencover-result.xml -filter:+[*]* -register:user 
 {% endhighlight %}
 Once this is completed the backend application is running again and can be used for testing.
@@ -37,7 +37,7 @@ Remote PowerShell will start a session, start OpenCover and when the task is fin
 When the PowerShell session is ended OpenCover will be killed.
 This can be avoided by using [Invoke-Command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-6#description){:target="_blank"} instead with the **-InDisconnectedSession** parameter:
 
-{% highlight ruby %}
+{% highlight powershell %}
 Invoke-Command -ComputerName $server -Credential $credential -InDisconnectedSession -ScriptBlock { <Insert OpenCover Start script> }
 {% endhighlight %}
 
