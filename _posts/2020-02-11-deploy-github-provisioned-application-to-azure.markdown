@@ -33,22 +33,7 @@ So the public key(Base64 string) gets converted to a byte array. Then the Sealed
 ### Deploy
 When the secret is stored in GitHub the Action can be triggered. The Action is now updated with the following steps:
 
-{% highlight yaml %}
-    - name: Azure Login
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-    - name: 'Run Azure webapp deploy action using publish profile credentials.'
-      uses: azure/webapps-deploy@v1
-      with: 
-        app-name: {{ApplicationNamePlaceHolder}} # Replace with your app name
-        package: ${{env.DOTNET_ROOT}}/PartsUnlimited 
-
-    - name: Azure Logout
-      run: |
-        az logout
-{% endhighlight %}
+![picture](/assets/20200211/dotnetcore.yml.png)
 
 After the Action is finished, the application should be deployed to the earlier created Azure resources. The complete code can be found [here on GitHub](https://github.com/thijslimmen/GitHub-InnovationDay). To summarize the scripts creates the following:
 - A repository in GitHub
