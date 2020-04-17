@@ -8,9 +8,11 @@ tag:
     - IIS
     - Code Coverage
     - Test Automation
+    - SonarQube
+    - SonarCloud
 ---
 
-So with my first post I managed to run OpenCover in the build and measure the code coverage on my .Net API by end-2-end tests. Of course this is fun, but it would be much more of value if we could also show the results somewhere. So in this post I will explain how to update the build to make this happen. In the end the results will be displayed in an Azure DevOps dashboard or SonarQube.
+So with my first post I managed to run OpenCover in the build and measure the code coverage on my .Net API by end-2-end tests. Of course this is fun, but it would be much more of value if we could also show the results somewhere. So in this post I will explain how to update the build to make this happen. In the end the results will be displayed in an Azure DevOps dashboard or SonarQube/SonarCloud.
 
 ![picture](/assets/20191025/joshua-earle-Dwheufds6kQ-unsplash.jpg)
 _Photo by Joshua Earle on [Unsplash](https://unsplash.com/photos/Dwheufds6kQ){:target="_blank"}_
@@ -42,8 +44,10 @@ https://marketplace.visualstudio.com/items?itemName=shanebdavis.code-coverage-da
 
 ![Code Coverage Widgets](/assets/20191025/graphs.png)
 
-### SonarQube
+### SonarQube/SonarCloud
 Beside Azure DevOps we can also supply the coverage to SonarQube. Therefore we need to set the 'sonar.cs.opencover.reportsPaths' property to the path of the SonarQube.xml created by ReportGenerator. Now the Sonarscanner should be able to upload the file to SonarQube.
+
+For SonarCloud or a newer version of SonarQube you need to set the 'sonar.coverageReportPaths' property.
 
 ### Result
 Now code coverage will automatically be updated and published to the desired tool/dashboard. New tests or missing tests will immediately affect the results. By doing this, we avoid the need to publish this by hand and we are always able to get the latest state of coverage for different kinds of tests. 
