@@ -46,3 +46,6 @@ Some things for us to keep in mind:
 - Builds and releases should be done by yml as it seems no API's are available
 
 The code we made can be found here: [https://github.com/thijslimmen/GitHub-InnovationDay](https://github.com/thijslimmen/GitHub-InnovationDay){:target="_blank"}
+
+UPDATE:
+In the meantime GitHub launched the API for managing secrets, read about it in [my other post](/deploy-github-provisioned-application-to-azure/). Also private repositories are now able to have [unlimited collaborators](https://github.blog/2020-04-14-github-is-now-free-for-teams/).
