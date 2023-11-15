@@ -108,9 +108,9 @@ analytics:
 # Site Author
 author:
   name             : "Niels Nijveldt"
-  avatar           : "/assets/images/picture.png"
-  bio              : "I enjoy working with ALM, DevOps, Azure and fullstack development."
-  location         : "Leiden, The Netherlands"
+  avatar           : "/assets/images/picture.jpg"
+  bio              : "I enjoy working with ALM, DevOps, Azure and Blazor."
+  location         : "The Netherlands"
   email            : "nnijveldt@xpirit.com"
   links:
     - label: "Email"
@@ -118,7 +118,7 @@ author:
       url: mailto:nnijveldt@xpirit.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://nielsnijveldt.github.io"
+      url: "https://blog.nijveldt.online"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/NielsNijveldt"
