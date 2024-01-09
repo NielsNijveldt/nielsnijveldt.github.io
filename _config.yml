@@ -109,13 +109,13 @@ analytics:
 author:
   name             : "Niels Nijveldt"
   avatar           : "/assets/images/picture.jpg"
-  bio              : "I enjoy working with ALM, DevOps, Azure and Blazor."
+  bio              : "I enjoy working with Blazor, Azure, DevOps and fullstack development."
   location         : "The Netherlands"
-  email            : "nnijveldt@xpirit.com"
+  email            : "niels.nijveldt@xebia.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:nnijveldt@xpirit.com
+      url: mailto:niels.nijveldt@xebia.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://blog.nijveldt.online"
@@ -137,7 +137,7 @@ footer:
       url: "https://linkedin.com/in/niels-nijveldt"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:nnijveldt@xpirit.com
+      url: mailto:niels.nijveldt@xebia.com
 
 
 # Reading Files

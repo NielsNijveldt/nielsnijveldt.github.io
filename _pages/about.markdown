@@ -3,10 +3,6 @@ permalink: /about/
 title: "About"
 ---
 
-I'm Niels Nijveldt and I work as consultant at [Xpirit](http://www.xpirit.com).
-I enjoy working with ALM, DevOps, Azure and fullstack development.
+I'm Niels Nijveldt and I work as consultant at [Xebia | Microsoft Services](https://xebia.com/).
+I enjoy working with Blazor, Azure, DevOps and fullstack development.
 On this blog I will share new things I learned.
-
-[![XPIRT](/assets/images/xprtblog.png)](xpirit)
-
-[xpirit]: https://github.com/OpenCover/opencover
